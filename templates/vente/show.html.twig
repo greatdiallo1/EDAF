@@ -1,0 +1,30 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Vente{% endblock %}
+
+{% block body %}
+    <h1>Vente</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ vente.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ vente.date ? vente.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Typevente</th>
+                <td>{{ vente.typevente }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('vente_index') }}">back to list</a>
+
+    <a href="{{ path('vente_edit', {'id': vente.id}) }}">edit</a>
+
+    {{ include('vente/_delete_form.html.twig') }}
+{% endblock %}

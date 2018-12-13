@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/edaf.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <i style="font-size:38px" class="fa">&#xf007;</i> Mr.Diallo
+        <button style="font-size:20px">log-out<i class="fa fa-sign-out"></i></button>
+      <div class="page">
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <a class="navbar-brand" href="{{ path('produit_index') }}">admin</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                      <ul class="navbar-nav mr-auto">
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ path('categorie_index') }}">GESTION DES CATEGORIES<span class="sr-only">(current)</span></a>
+                            </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ path('produit_index') }}">GESTION DES PRODUITS<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ path('fournisseur_index') }}">GESTION DES FOURNISSEURS</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ path('client_index') }}">GESTION DES CLIENTS</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="{{ path('facture_index') }}">GESTION DES PAIEMENTS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('vente_index') }}">GESTION DES COMMANDES</a>
+                          </li>
+                        
+                      </ul>
+                      
+                    </div>
+            </nav>
+          </div> <!--fin .menu-->
+             <div class="container">
+               {% block body %}{% endblock %}
+             </div>
+             </div> <!-- fin .page -->
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

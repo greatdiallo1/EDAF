@@ -1,0 +1,32 @@
+body{
+    background: rgb(247, 245, 241);
+}
+
+.page {
+    display: flex;
+    flex-flow: row wrap
+}
+
+.menu {
+    margin: 4% 0 0;
+    flex:1
+}
+.container {
+    margin: 4% 0 0;
+    flex:5
+}
+.navbar-nav {
+    display: block;
+}
+
+button{
+    height: 35px;
+    margin-left: 80%;
+    margin-top: 2%;
+    background: blueviolet;
+}
+
+.fa{
+    margin-left: 2%;
+    
+}
